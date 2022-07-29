@@ -1,7 +1,7 @@
-package io.portfolio.coronavirustracker.controllers;
+package io.portfolio.readinglist.controllers;
 
-import io.portfolio.coronavirustracker.models.LocationStats;
-import io.portfolio.coronavirustracker.services.CoronaVirusDataService;
+import io.portfolio.readinglist.models.LocationStats;
+import io.portfolio.readinglist.services.CoronaVirusDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

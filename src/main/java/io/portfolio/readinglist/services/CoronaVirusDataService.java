@@ -1,6 +1,6 @@
-package io.portfolio.coronavirustracker.services;
+package io.portfolio.readinglist.services;
 
-import io.portfolio.coronavirustracker.models.LocationStats;
+import io.portfolio.readinglist.models.LocationStats;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.scheduling.annotation.Scheduled;

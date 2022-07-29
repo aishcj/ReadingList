@@ -1,10 +1,10 @@
-package io.portfolio.coronavirustracker;
+package io.portfolio.readinglist;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CoronavirusTrackerApplicationTests {
+class ReadingListTests {
 
 	@Test
 	void contextLoads() {
