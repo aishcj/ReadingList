@@ -1,7 +1,5 @@
-package io.portfolio.readinglist.controllers;
+package io.portfolio.readinglist.books;
 
-import io.portfolio.readinglist.models.Book;
-import io.portfolio.readinglist.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,12 +29,12 @@ public class BookController {
     }
 
     @PutMapping("/books/{id}")
-    public ResponseEntity<Book> updateBook(@PathVariable long id, @RequestBody Book book) {
-        book.setBookId(id);
+    public ResponseEntity<Book> updateBook(@PathVariable BookAuthorId idBook, @RequestBody Book book) {
+        book.setBookId(idBook);
        return ResponseEntity.ok().body(this.bookService.updateBook(book));
     }
 
-    @DeleteMapping{"/books/{id}"}
+    @DeleteMapping("/books/{id}")
     public HttpStatus deleteBook(@PathVariable long id){
         this.bookService.deleteBook(id);
         return HttpStatus.OK;

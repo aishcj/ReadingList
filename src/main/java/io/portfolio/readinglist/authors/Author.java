@@ -1,4 +1,4 @@
-package io.portfolio.readinglist.models;
+package io.portfolio.readinglist.authors;
 
 import javax.persistence.*;
 
@@ -7,14 +7,23 @@ import javax.persistence.*;
 public class Author {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.AUTO)
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
     private long authorId;
 
-    @Column(name = "Publisher Name")
+    @Column(name = "Author First Name")
     private String FirstName;
 
-    @Column(name = "Publisher Name")
+    @Column(name = "Author Last Name")
     private String LastName;
+
+    public Author(long authorId, String firstName, String lastName) {
+        this.authorId = authorId;
+        FirstName = firstName;
+        LastName = lastName;
+    }
+    public Author() {
+    }
+
 
     public long getAuthorId() {
         return authorId;
@@ -39,4 +48,5 @@ public class Author {
     public void setLastName(String lastName) {
         LastName = lastName;
     }
+
 }

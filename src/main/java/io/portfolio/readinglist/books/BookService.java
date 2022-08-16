@@ -1,6 +1,4 @@
-package io.portfolio.readinglist.services;
-
-import io.portfolio.readinglist.models.Book;
+package io.portfolio.readinglist.books;
 
 import java.util.List;
 

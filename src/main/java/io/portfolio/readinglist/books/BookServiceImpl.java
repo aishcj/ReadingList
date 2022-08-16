@@ -1,8 +1,6 @@
-package io.portfolio.readinglist.services;
+package io.portfolio.readinglist.books;
 
 import io.portfolio.readinglist.exceptions.ResourceNotFoundException;
-import io.portfolio.readinglist.models.Book;
-import io.portfolio.readinglist.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +10,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class BookServiceImpl implements BookService{
+public class BookServiceImpl implements BookService {
 
     @Autowired
     private BookRepository bookRepository;
@@ -24,7 +22,7 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public Book updateBook(Book book) {
-        Optional<Book> bookDB = this.bookRepository.findById(book.getBookId());
+        Optional<Book> bookDB = this.bookRepository.findByBookId(book.getBookId());
 
         if(bookDB.isPresent()){
             Book bookUpdate = bookDB.get();
@@ -33,7 +31,6 @@ public class BookServiceImpl implements BookService{
             bookUpdate.setGenre(book.getGenre());
             bookUpdate.setPrice(book.getPrice());
             bookUpdate.setPublisherId(book.getPublisherId());
-            bookUpdate.setTotalPages(book.getTotalPages());
             bookRepository.save(bookUpdate);
             return bookUpdate;
         }
