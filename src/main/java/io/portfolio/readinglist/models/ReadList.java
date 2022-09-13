@@ -12,10 +12,7 @@ public class ReadList {
     private long readId;
 
     @OneToOne
-    @JoinColumns({
-            @JoinColumn(name = "book_bookId", referencedColumnName = "bookId"),
-            @JoinColumn(name = "book_authorId", referencedColumnName = "authorId")
-    })
+    @JoinColumn(name = "bookId")
     private Book book;
 
     public ReadList() {

@@ -12,16 +12,17 @@ public class Author {
     private long authorId;
 
     @Column(name = "Author First Name")
-    private String FirstName;
+    private String firstName;
 
     @Column(name = "Author Last Name")
-    private String LastName;
+    private String lastName;
 
     public Author(long authorId, String firstName, String lastName) {
         this.authorId = authorId;
-        FirstName = firstName;
-        LastName = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
+
     public Author() {
     }
 
@@ -34,20 +35,20 @@ public class Author {
         this.authorId = authorId;
     }
 
+
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
-
 }

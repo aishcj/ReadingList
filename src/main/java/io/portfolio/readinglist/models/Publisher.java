@@ -17,24 +17,16 @@ public class Publisher {
     @Column(name = "Publisher Name")
     private String publisherName;
 
-    @OneToMany
+ /*   @OneToMany
     @JoinColumn(name="publisherId")
-    private List<Book> books = new ArrayList<>();
+    private List<Book> books = new ArrayList<>(); */
 
-    public Publisher(long publisherId, String publisherName, List<Book> books) {
-        this.publisherId = publisherId;
-        this.publisherName = publisherName;
-        this.books = books;
-    }
     public Publisher() {
     }
 
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
+    public Publisher(long publisherId, String publisherName) {
+        this.publisherId = publisherId;
+        this.publisherName = publisherName;
     }
 
     public long getPublisherId() {

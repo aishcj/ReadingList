@@ -24,7 +24,7 @@ public class GenreServiceImpl implements GenreService {
 
     @Override
     public Genre updateGenre(Genre genre) {
-        Optional<Genre> genreDB = this.genreRepository.findByGenreName(genre.getGenreName());
+        Optional<Genre> genreDB = this.genreRepository.findByGenreId(genre.getGenreId());
 
         if(genreDB.isPresent()){
             Genre genreUpdate = genreDB.get();
@@ -67,16 +67,5 @@ public class GenreServiceImpl implements GenreService {
         }
 
     }
-    @Override
-    public void deleteGenreName(String genreName) {
-        Optional<Genre> genreDB = this.genreRepository.findByGenreName(genreName);
 
-        if(genreDB.isPresent()){
-            genreRepository.delete(genreDB.get());
-        }
-        else {
-            throw new ResourceNotFoundException("Record with the genre ID:" + genreName + " not found!");
-        }
-
-    }
 }

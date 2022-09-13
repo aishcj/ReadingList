@@ -7,16 +7,17 @@ import java.util.List;
 public class Genre {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @Column (name="Genre ID")
     private long genreId;
 
-    @Column(name = "Genre Name")
+    @Column(name = "genreName")
     private String genreName;
 
     public Genre() {
     }
 
-    public Genre(long genreId, String genreName) {
+    public Genre(long genreId, String genreName, Book book) {
         this.genreId = genreId;
         this.genreName = genreName;
     }

@@ -11,5 +11,4 @@ public interface GenreService {
     Genre getGenreByID(long genreId);
     void deleteGenre(long genreId);
 
-    void deleteGenreName(String name);
 }

@@ -40,9 +40,5 @@ public class GenreController {
         this.genreService.deleteGenre(id);
         return HttpStatus.OK;
     }
-    @DeleteMapping("/genres/{name}")
-    public HttpStatus deleteGenre(@PathVariable String name){
-        this.genreService.deleteGenreName(name);
-        return HttpStatus.OK;
-    }
+
 }

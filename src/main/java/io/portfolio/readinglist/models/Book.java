@@ -12,23 +12,21 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long bookId;
 
-    @OneToOne
-    @JoinColumn (name = "authorId")
-    private Author author;
-
     @Column(name = "Title")
     private String bookTitle;
 
-    @Column(name = "Publisher ID")
-    private long publisherId;
 
     @Column(name = "Price")
     private long price;
 
+    @OneToOne
+    @JoinColumn (name = "authorId")
+    private Author author;
 
-    @OneToMany
-    @Column (name= "Genre ID")
-    private List <Genre> genreId;
+
+    @OneToOne
+    @JoinColumn (name = "genreId")
+    private Genre genre;
 
     @OneToOne
     @JoinColumn(name="publisherId")
@@ -37,6 +35,14 @@ public class Book {
     public Book() {
     }
 
+    public Book(long bookId, String bookTitle, long price, Author author, Genre genre, Publisher publisher) {
+        this.bookId = bookId;
+        this.bookTitle = bookTitle;
+        this.price = price;
+        this.author = author;
+        this.genre = genre;
+        this.publisher = publisher;
+    }
 
     public String getBookTitle() {
         return bookTitle;
@@ -52,14 +58,6 @@ public class Book {
 
     public void setAuthor(Author author) {
         this.author = author;
-    }
-
-    public long getPublisherId() {
-        return publisherId;
-    }
-
-    public void setPublisherId(long publisherId) {
-        this.publisherId = publisherId;
     }
 
     public long getPrice() {
@@ -86,11 +84,11 @@ public class Book {
         this.bookId = bookId;
     }
 
-    public List<Genre> getGenreId() {
-        return genreId;
+    public Genre getGenre() {
+        return genre;
     }
 
-    public void setGenreId(List<Genre> genreId) {
-        this.genreId = genreId;
+    public void setGenre(Genre genre) {
+        this.genre = genre;
     }
 }
