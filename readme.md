@@ -25,29 +25,32 @@ This project was generated using Spring Boot.
    a. Author  
       
       
-      POST Method - `http://localhost:8080/authors`
-      {
-        "authorId": "1",
-        "firstName": "James",
-        "lastName": "Clear"
-      }
+       POST Method - `http://localhost:8080/authors`
+        {
+         "authorId": "1",
+         "firstName": "James",
+         "lastName": "Clear"
+       }
       
-      Update the values as below to create one more author record:
-       {
-        "authorId": "2",
-        "firstName": "Viktor",
-        "lastName": "Frankl"
-      }
+        Update the values as below to create one more author record:
+        {
+         "authorId": "2",
+         "firstName": "Viktor",
+         "lastName": "Frankl"
+        }
       
-      GET Method -
+       GET Method -
         i. get all authors - `http://localhost:8080/authors`
        ii. get author by id - `http://localhost:8080/authors/1`
        
        PUT Method - `http://localhost:8080/authors/1`
-       Use id value after "authors/" to update record by id.
+        Use id value after "authors/" to update record by id.
        
        DELETE Method - `http://localhost:8080/authors/1`
-       Use id value after "authors/" to delete record by id.
+        Use id value after "authors/" to delete record by id.
+        
+       For GET, PUT and DELETE methods for the rest of the tables:
+           Replace table name after 'http://localhost:8080/'
     
    b. Genre  
     
