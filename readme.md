@@ -1,4 +1,4 @@
-## Spring Data Jpa Book Database
+## Spring Data Jpa Book Database - Read/Wish List
 
 ## Project Description 
 This is a simple Spring Boot application implementing Rest API and Spring Data JPA for CRUD operations using Postman.
