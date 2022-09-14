@@ -70,7 +70,7 @@ This project was generated using Spring Boot.
          i. get all genres - `http://localhost:8080/genres`
         ii. get genre by id - `http://localhost:8080/genres/1`
         
-   c. Publisher - 
+   c. Publisher
     
       POST Method - `http://localhost:8080/publishers`
         {
@@ -84,7 +84,7 @@ This project was generated using Spring Boot.
           "publisherName": "Simon and Schuster"
         }
         
-   d. Book - 
+   d. Book 
    
       POST Method - `http://localhost:8080/books`
        {
