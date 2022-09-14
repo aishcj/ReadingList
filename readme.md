@@ -118,16 +118,17 @@ This project was generated using Spring Boot.
           }
         }
         
+
    e. Read Books
        
       POST Method - `http://localhost:8080/readBooks`
-       
       {
         "book" : {
              "bookId" : "1"
              },
         "readListId" : "1"
       }
+      
       
    f. Wish Books
        
