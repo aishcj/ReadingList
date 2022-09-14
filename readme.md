@@ -19,8 +19,8 @@ This project was generated using Spring Boot.
 3. In Postman, open workspace. Navigate to `http://localhost:8080`
    
 
-4.CRUD operations
-  For POST operations, place the JSON values under Body - select raw, then select JSON.
+4. CRUD operations
+   For POST operations, place the JSON values under Body - select raw, then select JSON.
   
    a. Author  
       
