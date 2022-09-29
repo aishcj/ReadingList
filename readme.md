@@ -19,7 +19,7 @@ This project was generated using Spring Boot.
 3. In Postman, open workspace. Navigate to `http://localhost:8080`
    
 
-4. CRUD operations
+4. CRUD operations:
    For POST operations, place the JSON values under Body - select raw, then select JSON.
   
    a. Author  
@@ -55,6 +55,7 @@ This project was generated using Spring Boot.
    b. Genre  
     
        POST Method - `http://localhost:8080/genres`
+       :
         {
           "genreId": "1",
           "genreName": "Self-Help"
@@ -73,6 +74,7 @@ This project was generated using Spring Boot.
    c. Publisher
     
       POST Method - `http://localhost:8080/publishers`
+      :
         {
           "publisherId": 1,
           "publisherName": "Penguin Random House"
@@ -87,6 +89,7 @@ This project was generated using Spring Boot.
    d. Book 
    
       POST Method - `http://localhost:8080/books`
+      :
        {
         "bookId": "1",
         "bookTitle": "Atomic Habits",
@@ -122,6 +125,7 @@ This project was generated using Spring Boot.
    e. Read Books
        
       POST Method - `http://localhost:8080/readBooks`
+      :
       {
         "book" : {
              "bookId" : "1"
@@ -133,6 +137,7 @@ This project was generated using Spring Boot.
    f. Wish Books
        
       POST Method - `http://localhost:8080/wishBooks`
+      :
        
       {
         "book" : {
